@@ -6,61 +6,137 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link href="Packages/materialize/css/materialize.css" rel="stylesheet" />
-    <link href="page.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body class="teal lighten-5">
-    <main>
-        <!-- #region Authentication form -->
-        <div id="loginPage" class="row">
-            <div class="col s12 z-depth-4 card-panel">
-                <form>
-                    <div class="row">
-                        <div class="input-field col s12 center">
-                            <p class="center">Welcome to Swartz club!</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input type="email" id="username" name="username" required/>
-                            <label for="username" class="center-align">Username</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input type="password" id="password" name="password" required/>
-                            <label for="password">Password</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 m12 l12">
-                            <input type="checkbox" id="remember-me"/>
-                            <label for="remember-me">Remember me</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <button type="submit" class="btn waves-effect waves-light col s12">
-                                <i class="material-icons right">Login</i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- #endregion -->
-    </main>
-    <footer class="page-footer">
-        <div class="footer-copyright">
-            <div class="container">
-                &copy; KPI ZPI-21 Hladchenko Ivan and Bachevych Alexey 2015.
-            </div>
-        </div>
-    </footer>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper teal">
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Шварц-Клуб</a>
+                    <a href="#!" class="breadcrumb">Клиенты</a>
 
-    <script type="text/javascript" src="Packages/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="Packages/materialize/js/materialize.js"></script>
+                    <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+                </div>
+                <ul class="side-nav" id="slide-out">
+                    <li class="no-padding">
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a class="collapsible-header">Персонал<i class="mdi-navigation-arrow-drop-down"></i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="#!">Администраторы</a></li>
+                                        <li><a href="#!">Тренера</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="trainers.html" class="active">Клиенты</a></li>
+                    <li><a href="collapsible.html">Оборудование</a></li>
+                    <li><a href="mobile.html">Упражнения</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- #region Clients list -->
+        <!-- #endregion -->
+        <div class="row" id="clientList">
+            <ul class="collapsible popout" data-collapsible="accordion" id="clientList-template">
+                <li class="collection-item avatar">
+                    <div class="collapsible-header" style="height: 70px;">
+                        <img src="assets/images/avatars/men_2.jpg" alt="" class="circle responsive-img" style="max-height: 60px;" />
+
+                        <strong>Иванов Иван Иванович</strong>
+
+                    </div>
+                    <div class="collapsible-body  teal lighten-4">
+                        <p>
+                            <strong>Пакет:&nbsp;</strong>Стандарт <br />
+                            <strong>Дата регистрации:&nbsp;</strong> 25/12/2014
+                        </p>
+                    </div>
+                    <!--<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>-->
+                </li>
+                <li class="collection-item avatar">
+                    <div class="collapsible-header" style="height: 70px;">
+
+                        <img src="assets/images/avatars/men_1.jpg" alt="" class="circle responsive-img" style="max-height: 60px;" />
+
+                        <strong>Петров Петр Петрович</strong>
+
+                    </div>
+                    <div class="collapsible-body teal lighten-4">
+                        <p>
+                            <strong>Пакет:&nbsp;</strong>Стандарт <br />
+                            <strong>Дата регистрации:&nbsp;</strong> 25/12/2014
+                        </p>
+                    </div>
+                    <!--<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>-->
+                </li>
+                <li class="collection-item avatar">
+                    <div class="collapsible-header" style="height: 70px;">
+                        <img src="assets/images/avatars/men_3.jpg" alt="" class="circle responsive-img" style="max-height: 60px;" />
+                        <strong>Петров Петр Петрович</strong>
+                    </div>
+                    <div class="collapsible-body teal lighten-4">
+                        <p>
+                            <strong>Пакет:&nbsp;</strong>Стандарт <br />
+                            <strong>Дата регистрации:&nbsp;</strong> 25/12/2014
+                        </p>
+                    </div>
+                    <!--<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>-->
+                </li>
+                <li class="collection-item avatar">
+                    <div class="collapsible-header" style="height: 70px;">
+                        <img src="assets/images/avatars/girl_1.jpg" alt="" class="circle responsive-img" style="max-height: 60px;" />
+                        <strong>Иванова Варвара Петровна</strong>
+                    </div>
+                    <div class="collapsible-body teal lighten-4">
+                        <p>
+                            <strong>Пакет:&nbsp;</strong>Стандарт <br />
+                            <strong>Дата регистрации:&nbsp;</strong> 25/12/2014
+                        </p>
+                    </div>
+                    <!--<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/template" id="client-template">
+        <li class="collection-item avatar">
+            <div class="collapsible-header" style="height: 70px;">
+                <img src="assets/images/avatars/men_3.jpg" alt="" class="circle responsive-img" style="max-height: 60px;" />
+                <strong><%= lastname + ' ' + firstname + ' ' +  middlename</strong>
+            </div>
+            <div class="collapsible-body teal lighten-4">
+                <p>
+                    <strong>Пакет:&nbsp;</strong><%- cardType%> <br />
+                    <strong>Дата регистрации:&nbsp;</strong><%- registered.toDateString()%>
+                </p>
+            </div>            
+        </li>
+    </script>
+    <script src="Packages/jquery-2.1.4.min.js"></script>
+    <script src="Packages/materialize/js/materialize.js"></script>
+    <script src="Packages/underscore.js"></script>
+    <script src="Packages/backbone.js"></script>
+    <script src="Packages/backbone.localStorage.js"></script>
+    <script src="js/models/client.js"></script>
+    <script src="js/collections/users.js"></script>
+    <script src="js/views/users.js"></script>
+    <script src="js/views/app.js"></script>
+    <script src="js/routers/router.js"></script>
+    <script src="js/app.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".button-collapse").sideNav({
+                menuWidth: 300
+            });
+        });
+    </script>
 </body>
 </html>
